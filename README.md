@@ -7,7 +7,7 @@
 
 [![DOI (CNN)](https://zenodo.org/badge/DOI/10.5281/zenodo.20615778.svg)](https://doi.org/10.5281/zenodo.20615778)
 [![DOI (Transformer)](https://zenodo.org/badge/DOI/10.5281/zenodo.20676854.svg)](https://doi.org/10.5281/zenodo.20676854)
-[![Live Demo](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-CNN%20(Real‑time)-blue)](https://huggingface.co/spaces/supzammy/EpiRNAh)
+[![Live Demo](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-CNN%20(Real‑time)-blue)](https://huggingface.co/spaces/supzammy/EpiRNAC)
 [![Live Demo (Transformer)](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Transformer%20Variant-lightgrey)](https://huggingface.co/spaces/supzammy/epiRNAT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -29,7 +29,7 @@ Both models were trained and evaluated on **11,844 experimentally verified human
 ## 🚀 Live Demos
 
 - **Real‑time CNN interface (recommended for exploration):**  
-  [huggingface.co/spaces/supzammy/EpiRNAh](https://huggingface.co/spaces/supzammy/EpiRNAh)  
+  [huggingface.co/spaces/supzammy/EpiRNAC](https://huggingface.co/spaces/supzammy/EpiRNAC)  
 - **Transformer variant interface (slower, for batch/offline use):**  
   [huggingface.co/spaces/supzammy/epiRNAT](https://huggingface.co/spaces/supzammy/epiRNAT)
 
