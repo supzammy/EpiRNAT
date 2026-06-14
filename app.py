@@ -667,24 +667,25 @@ table tr:hover td {
 }
 """
 
-with gr.Blocks(theme=glass_theme, css=custom_css, title="EpiRNA") as app:
+with gr.Blocks(theme=glass_theme, css=custom_css, title="EpiRNA-T") as app:
     with gr.Row():
         with gr.Column(scale=4):
             gr.HTML("""
                 <div style="margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.25rem;">
                     <h1 style="font-size: 3.5rem; margin: 0; font-weight: 900; letter-spacing: -0.05em; background: linear-gradient(135deg, #4f46e5 0%, #ec4899 50%, #e11d48 100%); -webkit-background-clip: text; background-clip: text; color: transparent;">EpiRNA</h1>
                     <p style="font-size: 1.1rem; color: #4b5563; margin: 0; font-weight: 500; letter-spacing: -0.01em;">Decoding RNA Catalytic Boundaries at Single‑Nucleotide Resolution</p>
-                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-top: 0.5rem;">
-    <div style="background: #e0e7ff; color: #4f46e5; font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: 20px; letter-spacing: 0.02em;">
-        ⚡ Live: Biophysical Tensor Fusion (CNN)
-    </div>
-    <div style="color: #6b7280; font-size: 0.75rem; font-weight: 500;">
-         Transformer variant: AUROC 0.80 · Specificity 0.83 · <a href="https://doi.org/10.5281/zenodo.20676854" style="color: #4f46e5; text-decoration: none; border-bottom: 1px dotted #e5eb46;">available offline</a>
-    </div>
-</div>
-                
-                </div>
-            """)
+                <div style="display: flex; align-items: center; gap: 0.75rem; margin-top: 0.5rem;">
+                <div style="display: flex; align-items: center; gap: 0.75rem; margin-top: 0.5rem;">
+                <div style="display:flex; align-items:center; gap:0.75rem; margin-top:0.5rem;">
+                <div style="display: flex; align-items: center; gap: 0.75rem; margin-top: 0.5rem;">
+                    <div style="background: #e0e7ff; color: #4f46e5; font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: 20px; letter-spacing: 0.02em;">
+                        Live: Transformer‑Biophysical Fusion
+                    </div>
+                    <div style="color: #6b7280; font-size: 0.75rem; font-weight: 500;">
+                        <a href="https://huggingface.co/spaces/supzammy/EpiRNAC" style="color: #4f46e5; text-decoration: none; border-bottom: 1px dotted #4f46e5;">⚡ Faster CNN scanner</a>
+                    </div>
+                </div>>
+                """)
             seq_input = gr.Textbox(label="RNA Sequence (≥41bp)", lines=3)
             threshold_radio = gr.Radio(
                 choices=[
@@ -818,13 +819,15 @@ with gr.Blocks(theme=glass_theme, css=custom_css, title="EpiRNA") as app:
                                 Trained on <strong>11,844 real human m⁶A sites (GSE63753)</strong> with an equal number of
                                 DRACH‑containing negative windows.
                             </p>
-                            <p style="color: #6b7280; font-size: 0.85rem;">
-                                ⚡ The live interface uses the <strong>pure Biophysical Tensor Fusion (CNN)</strong> model
-                                for instant, single‑nucleotide EBCS visualisation. The Transformer variant
-                                achieves superior classification but is intended for offline, genome‑wide
-                                prediction. Both checkpoints are available on Zenodo.
                             </p>
-                        </div>
+                            <div style="display: flex; align-items: center; gap: 0.75rem; margin-top: 0.5rem;">
+                                <div style="background: #e0e7ff; color: #4f46e5; font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: 20px; letter-spacing: 0.02em;">
+                                     Transformer‑Biophysical Fusion (High‑Fidelity Validator)
+                                </div>
+                                <div style="color: #6b7280; font-size: 0.75rem; font-weight: 500;">
+                                     ⚡ For fast scanning use the <a href="https://huggingface.co/spaces/supzammy/EpiRNAC" style="color: #4f46e5; text-decoration: none; border-bottom: 1px dotted #4f46e5;">CNN scanner</a>
+                                </div>
+                            </div>
 
                         <hr style="margin: 32px 0; border-color: #e5e7eb;">
                         <p style="font-size: 0.9rem; color: #6b7280;">
